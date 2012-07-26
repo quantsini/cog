@@ -1,0 +1,18 @@
+Font resize of playlist does not change file tree, and 
+does not resize columns (needs a lower bound), currently
+only resizes title column.
+
+Code for seeking should be moved into the AudioPlayer,
+so we can escape ugly event* functions (the problem is
+that the AppController needs access to seeker functions
+because of apple remote seeking incrementally)
+
+Shuffle list is not reshuffled when shuffling reaches
+start or end of it (in Repeat All mode)
+
+Menu items do not transform into "Hide Spotlight Panel" and
+"Hide File Drawer" when they are active.
+
+I anticipate that status should be flag based so statuses are not mutually exclusive.
+
+Issues with queueing the same song multiple times
